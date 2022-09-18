@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
-let timeout = 120000
-let poin = 500
+let timeout = 90000
+let poin = 300
 
 let handler = async (m, { conn, usedPrefix }) => {
     conn.tekateki = conn.tekateki ? conn.tekateki : {}
@@ -29,6 +29,7 @@ Bonus: ${poin} XP
 handler.help = ['tekateki']
 handler.tags = ['game']
 handler.command = /^tekateki/i
+handler.limit = true
 
 handler.game = true
 
